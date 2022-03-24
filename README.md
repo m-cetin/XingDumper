@@ -84,7 +84,7 @@ F.Achhammer@audi.de
 
 ## Credits
 
-This tool is a slightly modified version of XingDumper from @l4rm4nd:
+This tool is a slightly modified version of XingDumper from [@l4rm4nd](https://github.com/l4rm4nd/XingDumper):
 
 https://github.com/l4rm4nd/XingDumper
 
