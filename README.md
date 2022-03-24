@@ -26,6 +26,10 @@ optional arguments:
 
 ## Examples
 
+Dumping all Audi employee emails from XING API (max. 3000) into outfile using `--quiet` mode:
+````
+python3 xingdumper.py --url https://www.xing.com/pages/audiag --msuffix @audi.de --quiet > audi_employees.out
+````
 Dumping all Audi employees from XING API (max. 3000) into outfile using `--quiet` mode:
 ````
 python3 xingdumper.py --url https://www.xing.com/pages/audiag --quiet > audi_employees.out
