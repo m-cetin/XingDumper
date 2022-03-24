@@ -84,8 +84,8 @@ F.Achhammer@audi.de
 
 ## Credits
 
-This tool is a slightly modified version of XingDumper from [@l4rm4nd](https://github.com/l4rm4nd/XingDumper):
+This tool is a slightly modified version of XingDumper from [@l4rm4nd](https://github.com/l4rm4nd):
 
-https://github.com/l4rm4nd/XingDumper
+- https://github.com/l4rm4nd/XingDumper
 
 Updated tool because xing.com changes frequently the design, which can break the login process.
