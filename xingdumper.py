@@ -19,31 +19,31 @@ def login(mail, password):
             'perm':'0'
         }
 
-        print('Login:')
-        print("First Request: requesting CSRF token")
+        #print('Login:')
+        #print("First Request: requesting CSRF token")
         response1 = requests.get('https://login.xing.com/login/api/login')
-        print(response1.cookies)
+        #print(response1.cookies)
         cookies_dict = response1.cookies.get_dict()
         cookies_values = list(cookies_dict.values())
         csrf1 = cookies_values[2]
         csrf_check1 = cookies_values[1]
-        print("---------------------------------------------------------------------------------------------------")
+        #print("---------------------------------------------------------------------------------------------------")
 
-        print("Second Request: Receiving link including Auth: ")
+        #print("Second Request: Receiving link including Auth: ")
         response2 = requests.post("https://login.xing.com/login/api/login", json=payload, cookies=response1.cookies, headers={"X-Csrf-Token": csrf1, "Content-Type": "application/json; charset=utf-8", "User-Agent": "Mozilla/5.0 (X11; Linux x86_x64) AppleWebKit/537.11 (KHTML, like Gecko)", "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*,q=0.8", "Accept-Charset":"ISO-8859-1,utf--8;q=0.7,*;q=0.3","Accept-Encoding":"none","Connection":"keep-alive","Accept-Language":"en-US,en;q=0.8"}, allow_redirects=False)
-        print(response2)
+        #print(response2)
         result = re.search('(?<=href=").*?(?=")', response2.text)
         link= result.group(0)
-        print("Success. Authentication Link: ", link)
-        print("---------------------------------------------------------------------------------------------------")
+        #print("Success. Authentication Link: ", link)
+        #print("---------------------------------------------------------------------------------------------------")
 
-        print("Third Request: Following Auth Link and receiving Login tken + new CSRF tokens")
+        #print("Third Request: Following Auth Link and receiving Login tken + new CSRF tokens")
         response3 = requests.get(link, allow_redirects=False, cookies=response2.cookies)
         cookies_dict2 = response3.cookies.get_dict()
         cookie_values2 = list(cookies_dict2.values())
         login_token = cookie_values2[2]
-        print("Successfully logged in. Token: ", login_token)
-        print("---------------------------------------------------------------------------------------------------")
+        #print("Successfully logged in. Token: ", login_token)
+        #print("---------------------------------------------------------------------------------------------------")
 
         return login_token
 
@@ -143,7 +143,7 @@ if session != 0:
             postdata1 = {"operationName":"EntitySubpage","variables":{"id":company,"moduleType":"employees"},"query":"query EntitySubpage($id: SlugOrID!, ) {\n entityPageEX(id: $id) {\n ... on EntityPage {\n slug\n  title\n context {\n  companyId\n }\n  }\n }\n}\n"}
             r = requests.post(api, data=json.dumps(postdata1), headers=headers, cookies=cookies_dict)
             response1 = r.json()
-            print(response1)
+            #print(response1)
             companyID = response1["data"]["entityPageEX"]["context"]["companyId"]
 
             # retrieve employee information from the api based on previously obtained company id
