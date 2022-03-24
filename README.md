@@ -42,7 +42,7 @@ python3 xingdumper.py --url https://www.xing.com/pages/appleretaildeutschlandgmb
 
 ## Results
 
-The script will return employee data as semi-colon separated values (like CSV):
+The script will return a list of emails, which can be stored as txt file.
 
 ````
 
@@ -56,14 +56,28 @@ The script will return employee data as semi-colon separated values (like CSV):
  ░    ░   ▒ ░   ░   ░ ░ ░ ░   ░  ░ ░  ░  ░░░ ░ ░ ░      ░   ░░          ░     ░░   ░ 
  ░    ░   ░           ░       ░    ░       ░            ░               ░  ░  by LRVT                                                   
 
-[i] Company Name: Apple
-[i] Company X-ID: 271572.8873b4
-[i] Company Slug: appleretaildeutschlandgmbh
-[i] Dumping Date: 24/12/2021 13:37:00
+Valid credentials found!
+[i] Company Name: AUDI AG
+[i] Company X-ID: 26119.97c242
+[i] Company Slug: audiag
+[i] Dumping Date: 24/03/2022 14:47:34
 
-Firstname;Lastname;Position;Gender;Location;E-Mail;Fax;Mobile;Phone;Profile
-Mina;Abdallah;RFIC Design Engineer;MALE;Unterhaching,Deutschland;None;None;None;None;https://www.xing.com/profile/Mina_Abdallah
-Isma;Abdan;Gabelstaplerfahrer;MALE;Huelva,Spanien;None;None;None;None;https://www.xing.com/profile/Isma_Abdan
-
-[i] Successfully crawled 2 Apple employees. Hurray ^_-
+E-Mail
+S.AMBROSETTI@audi.de
+M.ANTONIO@audi.de
+A.ARMENGOL GASSOL@audi.de
+A.A_@audi.de
+G.Abatti@audi.de
+I.Abdalrahman@audi.de
+K.Abdelgawad@audi.de
+J.Abel@audi.de
+C.Abel@audi.de
+A.Abele@audi.de
+M.Aberle@audi.de
+F.Abermann@audi.de
+E.Ablassmeier@audi.de
+B.Ablaßmeier@audi.de
+D.Achhammer@audi.de
+F.Achhammer@audi.de
+(...)
 ````
