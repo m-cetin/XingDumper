@@ -202,7 +202,7 @@ if session != 0:
             # likely authorization error due to incorrect 'login' cookie
             # otherwise the script is broken or the api has been changed
             print()
-            print("[!] Authentication required. Login failed!")
+            #print("[!] Authentication required. Login failed!")
 
             #print("[debug] " + str(e))
     else:
