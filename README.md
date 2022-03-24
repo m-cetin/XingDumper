@@ -6,21 +6,20 @@ The results contain firstname, lastname, position, gender, location and a user's
 With the `--full` CLI flag an additional API request will be made for each employee to retrieve contact details such as email, fax, mobile and phone number. However, this data is most often unset by XING users.
 
 ## How-To
-1. Sign into www.xing.com and retrieve your ``login`` cookie value e.g. via developer tools
-2. Specify your cookie value in the python script's variable ``LOGIN_COOKIE`` or via the CLI flag ``--cookie``
+1. Run the tool, it'll ask you for your xing username (email) and password
+2. The script will locally save your credentials into a file called "auth.txt" and use these for authentication
 3. Browse your company on XING and note the url
 4. Install requirements via ``pip install -r requirements.txt``
 5. Run the Python script and enjoy results
 
 ## Usage
 ````
-usage: xingdumper.py [-h] --url <xing-url> [--count <number>] [--cookie <cookie>] [--full] [--quiet]
+usage: xingdumper.py [-h] --url <xing-url> [--count <number>] [--full] [--quiet]
 
 optional arguments:
   -h, --help         show this help message and exit
   --url <xing-url>   A XING company url - https://xing.com/pages/<company>
   --count <number>   Amount of employees to extract - max. 2999
-  --cookie <cookie>  XING 'login' cookie for authentication
   --full             Dump additional contact details (slow) - email, phone, fax, mobile
   --quiet            Show employee results only
 ````
